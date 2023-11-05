@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    {% load static %}
+
+</head>
+<body>
+
+<form method="POST" action="/update/{{ employee.id }}">
+    {% csrf_token %}
+
+    <h3>Update Details</h3>
+    <table>
+        <tr>
+            <td>Employee ID:</td>
+            <td><input type="text" name="eid" id="id_eid" required maxlength="20" value="{{ employee.eid }}"/> </td>
+
+        </tr>
+
+        <tr>
+            <td>Employee Name:</td>
+            <td><input type="text" name="ename" id="id_ename" required maxlength="100" value="{{ employee.ename }}"/> </td>
+
+        </tr>
+
+        <tr>
+            <td>Employee contact:</td>
+            <td><input type="text" name="econtact" id="id_econtact" required maxlength="15" value="{{ employee.econtact }}"/> </td>
+
+            <td><button type="submit">Update</button></td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>

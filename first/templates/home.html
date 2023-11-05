@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page </title>
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
+
+    <style>
+
+    </style>
+</head>
+<body>
+<h1>Welcome landing!</h1>
+<a href="{% url 'login' %}">logout</a>
+<form>
+  <div class="container">
+        <ul class="link">
+             <li><a href="{% url 'index' %}">Home</a></li>
+             <li><a href="{% url 'about' %}">about </a></li>
+             <li><a href="{% url 'contact' %}">Contact</a></li>
+             <li><a href="{% url 'service' %}">Service</a></li>
+        </ul>
+     </div>
+</form>
+ <div>
+         {% block body %}
+
+         {% endblock %}
+ </div>
+
+
+     <div class="footer">
+        <p>Footer section </p>
+     </div>
+</body>
+</html>

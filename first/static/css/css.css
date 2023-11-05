@@ -1,0 +1,30 @@
+.container{
+           height:60px;
+           background-color:forestgreen;
+        }
+        .link li {
+         float: left;
+        display: flex;
+        margin-left: 50px;
+         list-style:none;
+         font-size: 25px;
+        }
+        .link li a {
+           padding: 10px;
+           color: aliceblue;
+           font-size:25px;
+           text-decoration: none;
+           cursor: pointer;
+        }
+        .footer{
+            background-color: violet;
+            height: 50px;
+        }
+        p{
+            text-align: center;
+            padding: 15px;
+            font-size: 25px;
+        }
+        div{
+         height:520px;
+        }

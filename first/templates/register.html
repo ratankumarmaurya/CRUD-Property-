@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+
+<h1>
+    <p style="...">New user registration</p>
+</h1>
+
+<center>
+    <form action="/register/{{ employee.id }}" method="post">
+        {% csrf_token %}
+
+        <p style="...">username: <input type="text" name="username"/></p>
+
+        <p style=". . .">mailbox: <input type="text" name="email"/></p>
+
+        <p style=". . .">password: <input type="text" name="password"/></p>
+
+        <p style=". . ."> <input type="submit" name="register"/></p>
+        <p style=". . .">{{ error_name }}</p>
+    </form>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+{% extends "home.html" %}
+{% block body %}
+
+  <h1>Show Data in database </h1>
+
+   <form>
+   {% csrf_token %}
+     <table border="1">
+       <tr>
+         <th>Id</th>
+         <th>Eid</th>
+         <th>Ename</th>
+         <th>Econtact</th>
+       </tr>
+
+       {% for emp in form2 %}
+       <tr>
+         <td>{{emp.id}}</td>
+         <td>{{ emp.eid }}</td>
+         <td>{{emp.ename}}</td>
+         <td>{{emp.econtact}}</td>
+         <td>
+           <a href="/delete/{{ emp.id }}">Delete</a>
+           <a href="/edit/{{ emp.id}}">Edit</a>
+         </td>
+       </tr>
+       {% endfor %}
+     </table>
+   </form>
+
+
+{% endblock %}
+
